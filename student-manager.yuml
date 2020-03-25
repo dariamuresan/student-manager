@@ -1,0 +1,14 @@
+[Student]^[User]
+[Teacher]^[User]
+[Admin]^[User]
+[User]-(Login)
+(Login)>(Validate password)
+(Validate password)<(Invalid password)
+[Teacher]-(View students enrolled in courses)
+[Admin]-(Create students and teachers account)
+(Add grades for students enrolled in courses)>(View students enrolled in courses)
+[Teacher]-(Add grades for students enrolled in courses)
+[Admin]-(Link courses to existing teachers)
+[Student]-(View University details)
+(View University details)-(note: Course details;Curricula;other Events)
+[Student]-(View grades)
